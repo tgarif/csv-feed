@@ -1,0 +1,9 @@
+{
+  "extends": ["@tgarif/eslint-config/fix", ".eslintrc.json"],
+  "rules": {
+    "no-console": "off",
+    "no-constant-condition": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  }
+}

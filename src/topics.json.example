@@ -1,0 +1,13 @@
+{
+  "CATEGORY_1": {
+    "SUB_CATEGORY_1": {
+      "SUB_CATEGORY_1": "topic/:variable/:variable/topic/value",
+      "SUB_CATEGORY_2": "topic/:variable/:variable/topic/value"
+    },
+    "SUB_CATEGORY_2": "topic/:variable/:variable/topic/value"
+  },
+  "CATEGORY_2": {
+    "SUB_CATEGORY_1": "topic/:variable/:variable/topic/value",
+    "SUB_CATEGORY_2": "topic/:variable/:variable/topic/value"
+  }
+}
