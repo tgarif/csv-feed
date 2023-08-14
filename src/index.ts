@@ -394,6 +394,17 @@ function br() {
 (async () => {
   let parsedColumns: string[] = [];
 
+  const { mqttBrokerUrl } = await prompts({
+    type: "text",
+    name: "mqttBrokerUrl",
+    message: appChalk.promptMessage(
+      "Enter mqtt broker url (Default: mqtt://localhost:1883):"
+    ),
+    initial: "mqtt://localhost:1883",
+  });
+
+  const client = await mqtt.connectAsync(mqttBrokerUrl);
+
   const csvFiles = (await glob(join(resolve("."), "data", "**/*.csv"))).map(
     (p) => ({ path: p, filename: p.split("/").slice(-1)[0] })
   );
@@ -459,8 +470,6 @@ function br() {
       })
     )
   ).sort((a, b) => (a.time as Date).getTime() - (b.time as Date).getTime());
-
-  const client = await mqtt.connectAsync("mqtt://localhost:1883");
 
   br();
   console.log(appChalk.info("Topic builder"));
